@@ -86,7 +86,8 @@ module Game = struct
     let greens = List.map ~f:green lst in
     let blues = List.map ~f:blue lst in
     let extract = List.fold_left ~init:0 ~f:max in
-    (extract reds, extract greens, extract blues)
+    extract reds, extract greens, extract blues
+  ;;
 
   let power (reds, greens, blues) = reds * greens * blues
 end
